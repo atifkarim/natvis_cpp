@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+	<Type Name="FOO">
+		<DisplayString>Test ArrayItems</DisplayString>
+		<Expand>
+		<Item Name="[a]">a</Item>
+		<ArrayItems>
+			<Size>5</Size>
+			<ValuePointer>pointer_array</ValuePointer>
+		</ArrayItems>
+		</Expand>
+	</Type>
+
+	<!-- The following where FOO written that line is not working. This one I have used while i have
+	assigned pointer_array_1 as a member variable of FOO class. Later, I have used that a local variable
+	from main.cpp code -->
+	<Type Name="FOO">
+	<!-- <Type Name="uint32_t *"> -->
+		<DisplayString>Test IndexListItems</DisplayString>
+		<Expand>
+			<IndexListItems>
+				<Size>5</Size>
+				<ValueNode>pointer_array_1[$i]</ValueNode>
+			</IndexListItems>
+		</Expand>
+	</Type>
+
+</AutoVisualizer>
