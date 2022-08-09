@@ -1,9 +1,21 @@
 cmake_minimum_required(VERSION 3.10)
 
-set(CMAKE_C_COMPILER "clang-10")
-set(CMAKE_CXX_COMPILER "/usr/bin/clang-10")
+#set(CMAKE_C_COMPILER "clang-10")
+#set(CMAKE_CXX_COMPILER "/usr/bin/clang-10")
+set(CMAKE_C_COMPILER clang-10)
+set(CMAKE_CXX_COMPILER clang-10)
 
 project(Foo)
+
+if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
+  MESSAGE("Clang")
+elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+  MESSAGE("GNU")
+elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel")
+  MESSAGE("Intel")
+elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
+  MESSAGE("MSVC")
+endif()
 
 # Set the main target name to the project name, can be changed if needed.
 set(MAIN_TARGET_NAME ${PROJECT_NAME})
