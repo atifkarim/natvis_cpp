@@ -1,11 +1,15 @@
 cmake_minimum_required(VERSION 3.10)
 
-#set(CMAKE_C_COMPILER "clang-10")
-#set(CMAKE_CXX_COMPILER "/usr/bin/clang-10")
-set(CMAKE_C_COMPILER clang-10)
-set(CMAKE_CXX_COMPILER clang-10)
-
 project(Foo)
+
+set(CMAKE_C_COMPILER clang-10)
+set(CMAKE_CXX_COMPILER /usr/bin/clang-10)
+#set(CMAKE_C_COMPILER clang-10)
+#set(CMAKE_CXX_COMPILER clang-10)
+
+message(STATUS "CC from ENV: $ENV{CC}")
+set(SERIAL_C_COMPILER ${CMAKE_C_COMPILER})
+message(STATUS "SERIAL_C_COMPILER: ${SERIAL_C_COMPILER}")
 
 if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
   MESSAGE("Clang")
