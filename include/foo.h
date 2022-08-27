@@ -8,7 +8,6 @@ class FOO
 
         void Print_Value();
         uint32_t *pointer_array; // natvis checking will be done for this with ArrayItems
-        // uint32_t *pointer_array_1; // natvis checking will be done for this with IndexListItems
 
     protected:
         uint32_t a, b;
