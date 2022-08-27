@@ -28,10 +28,16 @@
 	<Type Name="Test_Natvis">
 		<DisplayString>Testing Large DataContainer_L</DisplayString>
 		<Expand>
-		<ArrayItems>
+		<!-- <ArrayItems>
 			<Size>large_container_size</Size>
 			<ValuePointer>large_container</ValuePointer>
-		</ArrayItems>
+		</ArrayItems> -->
+
+		<IndexListItems>
+			<Size>large_container_size</Size>
+			<ValueNode>large_container[$i]</ValueNode>
+		</IndexListItems>
+
 		</Expand>
 	</Type>
 
