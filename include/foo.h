@@ -13,3 +13,11 @@ class FOO
         uint32_t a, b;
 
 };
+
+class Test_Natvis
+{
+    public:
+        uint32_t * large_container; // this will point to array whose size is greater than 1000
+        uint32_t large_container_size;
+
+};
