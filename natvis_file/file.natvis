@@ -43,13 +43,39 @@
 
 	<!-- Trying to display limited range -->
 	<Type Name="int32_t *">
-      <DisplayString>Would like to observe limited or preferred ranged value</DisplayString>
-      <Expand>
-        <IndexListItems>
-          <Size>10</Size>
-          <ValueNode>limit_ptr[$i]</ValueNode>
-        </IndexListItems>
-      </Expand>
-    </Type>
+	  <DisplayString>Would like to observe limited or preferred ranged value</DisplayString>
+	  <Expand>
+		<IndexListItems>
+		  <Size>10</Size>
+		  <ValueNode>limit_ptr[$i]</ValueNode>
+		</IndexListItems>
+	  </Expand>
+	</Type>
+
+
+	<!-- https://stackoverflow.com/questions/65446147/how-to-make-multiple-list-expansions-for-a-single-type-using-natvis-visual-studi -->
+	<!-- <Type Name="uint32_t *">
+  <DisplayString>They are uint32 pointer type</DisplayString>
+  <Expand>
+	<Synthetic Name="uint32_t *">
+	  <DisplayString>Test IndexListItems</DisplayString>
+		<Expand>
+			<IndexListItems>
+				<Size>5</Size>
+				<ValueNode>pointer_array_1[$i]</ValueNode>
+			</IndexListItems>
+		</Expand>
+	</Synthetic>
+	<Synthetic Name="uint32_t *">
+		<DisplayString>Would like to observe limited or preferred ranged value</DisplayString>
+		<Expand>
+		<IndexListItems>
+		  <Size>10</Size>
+		  <ValueNode>limit_ptr[$i]</ValueNode>
+		</IndexListItems>
+	  </Expand>
+	</Synthetic>
+  </Expand>
+</Type> -->
 
 </AutoVisualizer>
