@@ -41,4 +41,15 @@
 		</Expand>
 	</Type>
 
+	<!-- Trying to display limited range -->
+	<Type Name="int32_t *">
+      <DisplayString>Would like to observe limited or preferred ranged value</DisplayString>
+      <Expand>
+        <IndexListItems>
+          <Size>10</Size>
+          <ValueNode>limit_ptr[$i]</ValueNode>
+        </IndexListItems>
+      </Expand>
+    </Type>
+
 </AutoVisualizer>
