@@ -35,12 +35,12 @@ int main()
 
 
     /// Try to display limited range using Natvis
-    int32_t limit_array[10];
+    uint32_t limit_array[10];
     for(int i = 0; i < 10; i++)
     {
         limit_array[i] = i*5;
     }
-    int32_t *limit_ptr = limit_array;
+    uint32_t *limit_ptr = limit_array;
 
     return 0;
 }
