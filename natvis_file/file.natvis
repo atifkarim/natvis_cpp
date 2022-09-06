@@ -47,7 +47,7 @@
 	  <Expand>
 		<IndexListItems>
 		  <Size>10</Size>
-		  <ValueNode>limit_ptr[$j]</ValueNode>
+		  <ValueNode>limit_ptr[$i]</ValueNode>
 		</IndexListItems>
 	  </Expand>
 	</Type>
