@@ -22,16 +22,15 @@ int main()
         std::cout << *(pointer_array_1 + i) << " *//* ";
     }
 
-    // To avoid collision place them in a seperate namespace
 
-        Test_Natvis test_natvis;
-        test_natvis.large_container_size = LARGE_ARRAY_SIZE;
-        uint32_t big_array[LARGE_ARRAY_SIZE];
-        for(int i = 0; i < LARGE_ARRAY_SIZE; i++)
-        {
-            big_array[i] = i*3;
-        }
-        test_natvis.large_container = big_array;
+    Test_Natvis test_natvis;
+    test_natvis.large_container_size = LARGE_ARRAY_SIZE;
+    uint32_t big_array[LARGE_ARRAY_SIZE];
+    for(int i = 0; i < LARGE_ARRAY_SIZE; i++)
+    {
+        big_array[i] = i*3;
+    }
+    test_natvis.large_container = big_array;
 
 
     /// Try to display limited range using Natvis

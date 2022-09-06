@@ -7,7 +7,7 @@ class FOO
                                         {}
 
         void Print_Value();
-        uint32_t *pointer_array; // natvis checking will be done for this with ArrayItems
+        uint32_t *pointer_array;
 
     protected:
         uint32_t a, b;
@@ -17,7 +17,7 @@ class FOO
 class Test_Natvis
 {
     public:
-        uint32_t * large_container; // this will point to array whose size is greater than 1000
+        uint32_t * large_container;
         uint32_t large_container_size;
 
 };
