@@ -14,16 +14,10 @@
     <Type Name="Test_Natvis">
         <DisplayString>Testing Large DataContainer</DisplayString>
         <Expand>
-        <!-- <ArrayItems>
-            <Size>large_container_size</Size>
-            <ValuePointer>large_container</ValuePointer>
-        </ArrayItems> -->
-
-        <IndexListItems>
-            <Size>large_container_size</Size>
-            <ValueNode>large_container[$i]</ValueNode>
-        </IndexListItems>
-
+            <IndexListItems>
+                <Size>large_container_size</Size>
+                <ValueNode>large_container[$i]</ValueNode>
+            </IndexListItems>
         </Expand>
     </Type>
 
@@ -41,15 +35,19 @@
         </Expand>
     </Type>
 
-    <!-- Trying to display limited range -->
+    <!-- Trying to display limited range value. Here the variable is declared in main.cpp file. -->
+    <!-- The problem here I am facing right now that, it is glued with the previous variable (pointer_array_1) -->
+    <!-- Is it a problem/bug no idea but trying to find. A question is asked which link is given below -->
+    <!-- https://stackoverflow.com/questions/73621047/display-more-than-one-variable-of-same-type-using-natvis -->
+
     <Type Name="uint32_t *">
-      <DisplayString>Would like to observe limited or preferred ranged value</DisplayString>
-      <Expand>
-        <IndexListItems>
-          <Size>10</Size>
-          <ValueNode>limit_ptr[$i]</ValueNode>
-        </IndexListItems>
-      </Expand>
+        <DisplayString>Would like to observe limited or preferred ranged value</DisplayString>
+        <Expand>
+            <IndexListItems>
+              <Size>10</Size>
+              <ValueNode>limit_ptr[$i]</ValueNode>
+            </IndexListItems>
+        </Expand>
     </Type>
 
 
